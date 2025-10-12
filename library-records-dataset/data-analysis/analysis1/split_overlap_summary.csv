@@ -1,4 +1,7 @@
 Metric,Value
+Train_FileCount,90452.0
+Dev_FileCount,19949.0
+Test_FileCount,26168.0
 Train_Size,35116.0
 Dev_Size,17261.0
 Test_Size,17330.0

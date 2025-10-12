@@ -108,18 +108,26 @@ def main():
     root, out_dir = get_paths()
     bases = split_dirs(root)
 
-    # subject_counts: subject_id -> {"name": str, "train": int, "dev": int, "test": int}
+    # subject_counts: subject_id -> {"name": str, "train": int, "dev": 0, "test": 0}
     subject_counts = defaultdict(lambda: {"name": None, "train": 0, "dev": 0, "test": 0})
 
-    # Also track per-split sets for (binary) Jaccard
+    # Track per-split sets (binary presence) for Jaccard
     split_sets = {"train": set(), "dev": set(), "test": set()}
+
+    # NEW: count total .jsonld files per split (regardless of parse success)
+    split_file_counts = {"train": 0, "dev": 0, "test": 0}
 
     for split, base_dir in bases.items():
         for _type, _lang, fpath in walk_files(base_dir):
+            # Count the file for this split
+            split_file_counts[split] += 1
+
+            # Parse and aggregate subjects
             try:
                 with open(fpath, "r", encoding="utf-8") as f:
                     data = json.load(f)
             except Exception:
+                # even if unreadable, it still counted toward file totals
                 continue
 
             graph = data.get("@graph", [])
@@ -139,7 +147,7 @@ def main():
                     entry["name"] = name
                 entry[split] += 1
 
-            # Track membership for (binary) overlap
+            # Binary presence for Jaccard
             split_sets[split].update(subj_ids)
 
     # -------- Build subjects_by_split.csv --------
@@ -176,7 +184,7 @@ def main():
             return 1.0
         return len(a & b) / len(a | b) if (a or b) else 0.0
 
-    # NEW: weighted jaccard over nonnegative count vectors
+    # weighted jaccard (tanimoto) over nonnegative count vectors
     def weighted_jaccard(count_key_x: str, count_key_y: str) -> float:
         min_sum = 0
         max_sum = 0
@@ -190,9 +198,17 @@ def main():
         return round(min_sum / max_sum, 4)
 
     overlap_rows = [
+        # NEW: file counts per split
+        {"Metric": "Train_FileCount", "Value": split_file_counts.get("train", 0)},
+        {"Metric": "Dev_FileCount", "Value": split_file_counts.get("dev", 0)},
+        {"Metric": "Test_FileCount", "Value": split_file_counts.get("test", 0)},
+
+        # Subject set sizes
         {"Metric": "Train_Size", "Value": len(train_set)},
         {"Metric": "Dev_Size", "Value": len(dev_set)},
         {"Metric": "Test_Size", "Value": len(test_set)},
+
+        # Intersections & uniques
         {"Metric": "Train_Dev_Intersection", "Value": len(train_set & dev_set)},
         {"Metric": "Train_Test_Intersection", "Value": len(train_set & test_set)},
         {"Metric": "Dev_Test_Intersection", "Value": len(dev_set & test_set)},
@@ -200,10 +216,13 @@ def main():
         {"Metric": "Train_Only", "Value": len(train_set - (dev_set | test_set))},
         {"Metric": "Dev_Only", "Value": len(dev_set - (train_set | test_set))},
         {"Metric": "Test_Only", "Value": len(test_set - (train_set | dev_set))},
+
+        # Binary Jaccard
         {"Metric": "Jaccard_Train_Dev", "Value": round(jaccard(train_set, dev_set), 4)},
         {"Metric": "Jaccard_Train_Test", "Value": round(jaccard(train_set, test_set), 4)},
         {"Metric": "Jaccard_Dev_Test", "Value": round(jaccard(dev_set, test_set), 4)},
-        # NEW: weighted Jaccard (Tanimoto) using per-subject presence counts
+
+        # Weighted Jaccard (Tanimoto) using per-subject presence counts
         {"Metric": "WeightedJaccard_Train_Dev", "Value": weighted_jaccard("train", "dev")},
         {"Metric": "WeightedJaccard_Train_Test", "Value": weighted_jaccard("train", "test")},
         {"Metric": "WeightedJaccard_Dev_Test", "Value": weighted_jaccard("dev", "test")},
@@ -254,6 +273,7 @@ def main():
     print(f"\n✅ Saved: {subjects_csv_path}")
     print(f"✅ Saved: {overlap_csv_path}")
     print(f"✅ Saved: {outliers_csv_path}")
+    print(f"📦 File counts — train: {split_file_counts.get('train',0)}, dev: {split_file_counts.get('dev',0)}, test: {split_file_counts.get('test',0)}")
 
 
 if __name__ == "__main__":
