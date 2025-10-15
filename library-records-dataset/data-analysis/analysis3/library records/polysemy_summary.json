@@ -1,0 +1,11 @@
+{
+  "FilesParsed": 136569,
+  "LabelNormalization": "lower",
+  "MinTotalFilter": 1,
+  "NumLabels": 41218,
+  "NumPolysemousLabels": 0,
+  "PctPolysemousLabels": 0.0,
+  "AvgIDsPerPolysemousLabel": 0.0,
+  "MedianIDsPerPolysemousLabel": 0.0,
+  "ExamplesTopAmbiguous": []
+}

@@ -1,0 +1,19 @@
+{
+  "GND_File": "C:\\Users\\DSouzaJ\\Datasets\\subject-indexing-dataset\\GND\\subjects-taxonomy\\GND-subjects.json",
+  "TotalCodesInFile": 207001,
+  "LabelSource": "pref",
+  "Normalization": "lower",
+  "MinAltLen": 1,
+  "UniqueLabels_Considered": 206936,
+  "NumPolysemousLabels": 65,
+  "PctPolysemousLabels": 0.000314,
+  "Example": {
+    "LabelNorm": "alakaluf",
+    "RawLabelExample": "Alakaluf",
+    "NumCodes": 2,
+    "Codes": "gnd:1071000497; gnd:4001008-9",
+    "RolesPerCode": "gnd:1071000497:pref; gnd:4001008-9:pref",
+    "PrefCount": 2,
+    "AltCount": 0
+  }
+}

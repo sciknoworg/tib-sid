@@ -1,0 +1,19 @@
+{
+  "GND_File": "C:\\Users\\DSouzaJ\\Datasets\\subject-indexing-dataset\\GND\\subjects-taxonomy\\GND-subjects.json",
+  "TotalCodesInFile": 207001,
+  "LabelSource": "all",
+  "Normalization": "lower",
+  "MinAltLen": 1,
+  "UniqueLabels_Considered": 420809,
+  "NumPolysemousLabels": 2181,
+  "PctPolysemousLabels": 0.005183,
+  "Example": {
+    "LabelNorm": "abwasseranalyse,kennzahl",
+    "RawLabelExample": "Abwasseranalyse,Kennzahl",
+    "NumCodes": 7,
+    "Codes": "gnd:4145594-0; gnd:4147637-2; gnd:4185748-3; gnd:4360165-0; gnd:4381803-1; gnd:4586442-1; gnd:4586443-3",
+    "RolesPerCode": "gnd:4145594-0:alt; gnd:4147637-2:alt; gnd:4185748-3:alt; gnd:4360165-0:alt; gnd:4381803-1:alt; gnd:4586442-1:alt; gnd:4586443-3:alt",
+    "PrefCount": 0,
+    "AltCount": 7
+  }
+}
