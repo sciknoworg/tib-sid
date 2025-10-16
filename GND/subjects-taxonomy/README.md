@@ -8,6 +8,21 @@
 
 ### 📊 Property Coverage Summary
 
+
+To generate the property coverage summary, run the following command from the `scripts` folder:
+
+```bash
+python .\count_property_coverage.py
+```
+
+When prompted, provide the path to your GND JSON file, for example:
+
+```bash
+INPUT_FILE = ../subjects-taxonomy/GND-subjects.json
+```
+
+#### Example output:
+
 **Total records:** 207,001
 
 | Property               | Count  | Percent |
