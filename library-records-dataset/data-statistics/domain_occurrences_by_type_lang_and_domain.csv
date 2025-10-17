@@ -1,0 +1,291 @@
+Type,Lang,Domain Abbrev,Domain (English),Domain (German),Total Occurrences
+Article,en,oek,Economics,Wirtschaftswissenschaften,1590
+Article,en,mat,Mathematics,Mathematik,216
+Article,en,sow,Social Sciences,Sozialwissenschaften,200
+Article,en,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",105
+Article,en,jur,Law,Rechtswissenschaften,80
+Article,en,phy,Physics,Physik,73
+Article,en,hor,Horticulture,Gartenbau,64
+Article,en,inf,Computer Science,Informatik,51
+Article,en,meda,Medicine,Medizin,33
+Article,en,geo,Earth Sciences,"Geowissenschaften, Geographie",27
+Article,en,tec,Engineering,Technik allgemein,23
+Article,en,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",16
+Article,en,elt,Electrical engineering,Elektrotechnik,11
+Article,en,fer,Material science,Werkstoffkunde,10
+Article,en,rest,Other subjects,Konnte nicht zugeordnet werden,9
+Article,en,rel,Study of religions,"Religionswissenschaft, Theologie",4
+Article,en,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,2
+Article,en,che,Chemistry,Chemie,2
+Article,en,his,History,Geschichte,1
+Article,en,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",1
+Article,en,arc,Architecture,Architektur,0
+Article,en,bau,Civil engineering,Bauwesen,0
+Article,en,ber,Mining,Bergbau,0
+Article,en,bio,Life Sciences,"Biowissenschaften, Biologie",0
+Article,en,lin,Linguistics,Sprachwissenschaften,0
+Article,en,lit,Literature Studies,Literaturwissenschaften,0
+Article,en,med,Medical technology,Medizintechnik,0
+Article,en,phi,Philosophy,Philosophie,0
+Article,en,spo,Sports Science,Sportwissenschaft,0
+Article,de,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",4
+Article,de,arc,Architecture,Architektur,3
+Article,de,bau,Civil engineering,Bauwesen,3
+Article,de,tec,Engineering,Technik allgemein,3
+Article,de,fer,Material science,Werkstoffkunde,1
+Article,de,mat,Mathematics,Mathematik,1
+Article,de,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",1
+Article,de,phy,Physics,Physik,1
+Article,de,ber,Mining,Bergbau,0
+Article,de,bio,Life Sciences,"Biowissenschaften, Biologie",0
+Article,de,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,0
+Article,de,che,Chemistry,Chemie,0
+Article,de,elt,Electrical engineering,Elektrotechnik,0
+Article,de,geo,Earth Sciences,"Geowissenschaften, Geographie",0
+Article,de,his,History,Geschichte,0
+Article,de,hor,Horticulture,Gartenbau,0
+Article,de,inf,Computer Science,Informatik,0
+Article,de,jur,Law,Rechtswissenschaften,0
+Article,de,lin,Linguistics,Sprachwissenschaften,0
+Article,de,lit,Literature Studies,Literaturwissenschaften,0
+Article,de,med,Medical technology,Medizintechnik,0
+Article,de,meda,Medicine,Medizin,0
+Article,de,oek,Economics,Wirtschaftswissenschaften,0
+Article,de,phi,Philosophy,Philosophie,0
+Article,de,rel,Study of religions,"Religionswissenschaft, Theologie",0
+Article,de,rest,Other subjects,Konnte nicht zugeordnet werden,0
+Article,de,sow,Social Sciences,Sozialwissenschaften,0
+Article,de,spo,Sports Science,Sportwissenschaft,0
+Article,de,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",0
+Book,en,mat,Mathematics,Mathematik,6593
+Book,en,oek,Economics,Wirtschaftswissenschaften,6007
+Book,en,inf,Computer Science,Informatik,5872
+Book,en,sow,Social Sciences,Sozialwissenschaften,5405
+Book,en,phy,Physics,Physik,4802
+Book,en,his,History,Geschichte,3014
+Book,en,arc,Architecture,Architektur,2687
+Book,en,lit,Literature Studies,Literaturwissenschaften,2428
+Book,en,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",2362
+Book,en,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,2316
+Book,en,elt,Electrical engineering,Elektrotechnik,1994
+Book,en,tec,Engineering,Technik allgemein,1787
+Book,en,rest,Other subjects,Konnte nicht zugeordnet werden,1760
+Book,en,geo,Earth Sciences,"Geowissenschaften, Geographie",1675
+Book,en,lin,Linguistics,Sprachwissenschaften,1558
+Book,en,che,Chemistry,Chemie,1555
+Book,en,meda,Medicine,Medizin,1534
+Book,en,bio,Life Sciences,"Biowissenschaften, Biologie",1343
+Book,en,hor,Horticulture,Gartenbau,1016
+Book,en,jur,Law,Rechtswissenschaften,1000
+Book,en,bau,Civil engineering,Bauwesen,923
+Book,en,fer,Material science,Werkstoffkunde,894
+Book,en,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",876
+Book,en,rel,Study of religions,"Religionswissenschaft, Theologie",859
+Book,en,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",725
+Book,en,phi,Philosophy,Philosophie,608
+Book,en,med,Medical technology,Medizintechnik,353
+Book,en,spo,Sports Science,Sportwissenschaft,148
+Book,en,ber,Mining,Bergbau,101
+Book,de,sow,Social Sciences,Sozialwissenschaften,13601
+Book,de,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",11798
+Book,de,oek,Economics,Wirtschaftswissenschaften,11646
+Book,de,his,History,Geschichte,5557
+Book,de,inf,Computer Science,Informatik,3816
+Book,de,jur,Law,Rechtswissenschaften,3581
+Book,de,lit,Literature Studies,Literaturwissenschaften,3052
+Book,de,mat,Mathematics,Mathematik,2444
+Book,de,rel,Study of religions,"Religionswissenschaft, Theologie",2376
+Book,de,arc,Architecture,Architektur,2275
+Book,de,phi,Philosophy,Philosophie,2152
+Book,de,tec,Engineering,Technik allgemein,2148
+Book,de,rest,Other subjects,Konnte nicht zugeordnet werden,2112
+Book,de,lin,Linguistics,Sprachwissenschaften,1661
+Book,de,phy,Physics,Physik,1588
+Book,de,meda,Medicine,Medizin,1540
+Book,de,geo,Earth Sciences,"Geowissenschaften, Geographie",1382
+Book,de,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",1224
+Book,de,bau,Civil engineering,Bauwesen,1066
+Book,de,elt,Electrical engineering,Elektrotechnik,1019
+Book,de,bio,Life Sciences,"Biowissenschaften, Biologie",1009
+Book,de,spo,Sports Science,Sportwissenschaft,943
+Book,de,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,915
+Book,de,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",703
+Book,de,hor,Horticulture,Gartenbau,696
+Book,de,che,Chemistry,Chemie,537
+Book,de,fer,Material science,Werkstoffkunde,329
+Book,de,med,Medical technology,Medizintechnik,60
+Book,de,ber,Mining,Bergbau,29
+Conference,en,inf,Computer Science,Informatik,2013
+Conference,en,mat,Mathematics,Mathematik,1335
+Conference,en,phy,Physics,Physik,590
+Conference,en,oek,Economics,Wirtschaftswissenschaften,504
+Conference,en,sow,Social Sciences,Sozialwissenschaften,343
+Conference,en,his,History,Geschichte,269
+Conference,en,tec,Engineering,Technik allgemein,240
+Conference,en,rest,Other subjects,Konnte nicht zugeordnet werden,238
+Conference,en,arc,Architecture,Architektur,214
+Conference,en,geo,Earth Sciences,"Geowissenschaften, Geographie",198
+Conference,en,lit,Literature Studies,Literaturwissenschaften,190
+Conference,en,elt,Electrical engineering,Elektrotechnik,178
+Conference,en,lin,Linguistics,Sprachwissenschaften,162
+Conference,en,meda,Medicine,Medizin,156
+Conference,en,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",146
+Conference,en,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,142
+Conference,en,jur,Law,Rechtswissenschaften,128
+Conference,en,rel,Study of religions,"Religionswissenschaft, Theologie",124
+Conference,en,fer,Material science,Werkstoffkunde,110
+Conference,en,che,Chemistry,Chemie,103
+Conference,en,bio,Life Sciences,"Biowissenschaften, Biologie",98
+Conference,en,bau,Civil engineering,Bauwesen,92
+Conference,en,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",80
+Conference,en,hor,Horticulture,Gartenbau,57
+Conference,en,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",57
+Conference,en,med,Medical technology,Medizintechnik,47
+Conference,en,phi,Philosophy,Philosophie,45
+Conference,en,spo,Sports Science,Sportwissenschaft,20
+Conference,en,ber,Mining,Bergbau,6
+Conference,de,sow,Social Sciences,Sozialwissenschaften,931
+Conference,de,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",707
+Conference,de,his,History,Geschichte,611
+Conference,de,oek,Economics,Wirtschaftswissenschaften,432
+Conference,de,jur,Law,Rechtswissenschaften,424
+Conference,de,arc,Architecture,Architektur,375
+Conference,de,rel,Study of religions,"Religionswissenschaft, Theologie",310
+Conference,de,lit,Literature Studies,Literaturwissenschaften,271
+Conference,de,rest,Other subjects,Konnte nicht zugeordnet werden,209
+Conference,de,lin,Linguistics,Sprachwissenschaften,179
+Conference,de,phi,Philosophy,Philosophie,143
+Conference,de,geo,Earth Sciences,"Geowissenschaften, Geographie",114
+Conference,de,meda,Medicine,Medizin,102
+Conference,de,inf,Computer Science,Informatik,91
+Conference,de,tec,Engineering,Technik allgemein,73
+Conference,de,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",54
+Conference,de,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",46
+Conference,de,bau,Civil engineering,Bauwesen,42
+Conference,de,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,39
+Conference,de,mat,Mathematics,Mathematik,38
+Conference,de,spo,Sports Science,Sportwissenschaft,34
+Conference,de,hor,Horticulture,Gartenbau,30
+Conference,de,bio,Life Sciences,"Biowissenschaften, Biologie",18
+Conference,de,elt,Electrical engineering,Elektrotechnik,11
+Conference,de,med,Medical technology,Medizintechnik,11
+Conference,de,phy,Physics,Physik,9
+Conference,de,ber,Mining,Bergbau,6
+Conference,de,fer,Material science,Werkstoffkunde,6
+Conference,de,che,Chemistry,Chemie,4
+Report,en,inf,Computer Science,Informatik,308
+Report,en,sow,Social Sciences,Sozialwissenschaften,291
+Report,en,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,264
+Report,en,oek,Economics,Wirtschaftswissenschaften,226
+Report,en,mat,Mathematics,Mathematik,217
+Report,en,his,History,Geschichte,206
+Report,en,phy,Physics,Physik,191
+Report,en,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",134
+Report,en,tec,Engineering,Technik allgemein,128
+Report,en,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",121
+Report,en,geo,Earth Sciences,"Geowissenschaften, Geographie",107
+Report,en,arc,Architecture,Architektur,106
+Report,en,bio,Life Sciences,"Biowissenschaften, Biologie",89
+Report,en,lit,Literature Studies,Literaturwissenschaften,84
+Report,en,rel,Study of religions,"Religionswissenschaft, Theologie",83
+Report,en,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",82
+Report,en,che,Chemistry,Chemie,77
+Report,en,hor,Horticulture,Gartenbau,74
+Report,en,elt,Electrical engineering,Elektrotechnik,70
+Report,en,meda,Medicine,Medizin,70
+Report,en,fer,Material science,Werkstoffkunde,57
+Report,en,lin,Linguistics,Sprachwissenschaften,53
+Report,en,bau,Civil engineering,Bauwesen,43
+Report,en,rest,Other subjects,Konnte nicht zugeordnet werden,43
+Report,en,jur,Law,Rechtswissenschaften,30
+Report,en,med,Medical technology,Medizintechnik,22
+Report,en,phi,Philosophy,Philosophie,19
+Report,en,spo,Sports Science,Sportwissenschaft,10
+Report,en,ber,Mining,Bergbau,8
+Report,de,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",521
+Report,de,sow,Social Sciences,Sozialwissenschaften,488
+Report,de,oek,Economics,Wirtschaftswissenschaften,363
+Report,de,inf,Computer Science,Informatik,305
+Report,de,his,History,Geschichte,192
+Report,de,mat,Mathematics,Mathematik,167
+Report,de,arc,Architecture,Architektur,158
+Report,de,lit,Literature Studies,Literaturwissenschaften,133
+Report,de,tec,Engineering,Technik allgemein,112
+Report,de,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,98
+Report,de,geo,Earth Sciences,"Geowissenschaften, Geographie",97
+Report,de,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",88
+Report,de,jur,Law,Rechtswissenschaften,82
+Report,de,lin,Linguistics,Sprachwissenschaften,82
+Report,de,rest,Other subjects,Konnte nicht zugeordnet werden,81
+Report,de,phy,Physics,Physik,76
+Report,de,rel,Study of religions,"Religionswissenschaft, Theologie",73
+Report,de,meda,Medicine,Medizin,72
+Report,de,elt,Electrical engineering,Elektrotechnik,71
+Report,de,phi,Philosophy,Philosophie,71
+Report,de,hor,Horticulture,Gartenbau,67
+Report,de,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",67
+Report,de,bau,Civil engineering,Bauwesen,61
+Report,de,bio,Life Sciences,"Biowissenschaften, Biologie",60
+Report,de,spo,Sports Science,Sportwissenschaft,52
+Report,de,che,Chemistry,Chemie,32
+Report,de,fer,Material science,Werkstoffkunde,15
+Report,de,med,Medical technology,Medizintechnik,4
+Report,de,ber,Mining,Bergbau,1
+Thesis,en,phy,Physics,Physik,962
+Thesis,en,che,Chemistry,Chemie,808
+Thesis,en,bio,Life Sciences,"Biowissenschaften, Biologie",676
+Thesis,en,mat,Mathematics,Mathematik,509
+Thesis,en,jur,Law,Rechtswissenschaften,460
+Thesis,en,oek,Economics,Wirtschaftswissenschaften,442
+Thesis,en,sow,Social Sciences,Sozialwissenschaften,437
+Thesis,en,geo,Earth Sciences,"Geowissenschaften, Geographie",371
+Thesis,en,inf,Computer Science,Informatik,360
+Thesis,en,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,301
+Thesis,en,hor,Horticulture,Gartenbau,298
+Thesis,en,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",252
+Thesis,en,meda,Medicine,Medizin,250
+Thesis,en,his,History,Geschichte,227
+Thesis,en,tec,Engineering,Technik allgemein,209
+Thesis,en,lit,Literature Studies,Literaturwissenschaften,202
+Thesis,en,rest,Other subjects,Konnte nicht zugeordnet werden,196
+Thesis,en,elt,Electrical engineering,Elektrotechnik,182
+Thesis,en,lin,Linguistics,Sprachwissenschaften,130
+Thesis,en,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",123
+Thesis,en,rel,Study of religions,"Religionswissenschaft, Theologie",111
+Thesis,en,fer,Material science,Werkstoffkunde,108
+Thesis,en,arc,Architecture,Architektur,100
+Thesis,en,bau,Civil engineering,Bauwesen,71
+Thesis,en,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",64
+Thesis,en,phi,Philosophy,Philosophie,53
+Thesis,en,med,Medical technology,Medizintechnik,34
+Thesis,en,spo,Sports Science,Sportwissenschaft,32
+Thesis,en,ber,Mining,Bergbau,7
+Thesis,de,jur,Law,Rechtswissenschaften,2719
+Thesis,de,sow,Social Sciences,Sozialwissenschaften,2690
+Thesis,de,oek,Economics,Wirtschaftswissenschaften,2354
+Thesis,de,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",2107
+Thesis,de,his,History,Geschichte,1121
+Thesis,de,rest,Other subjects,Konnte nicht zugeordnet werden,764
+Thesis,de,phy,Physics,Physik,685
+Thesis,de,lit,Literature Studies,Literaturwissenschaften,606
+Thesis,de,che,Chemistry,Chemie,544
+Thesis,de,inf,Computer Science,Informatik,481
+Thesis,de,tec,Engineering,Technik allgemein,458
+Thesis,de,rel,Study of religions,"Religionswissenschaft, Theologie",419
+Thesis,de,meda,Medicine,Medizin,401
+Thesis,de,bio,Life Sciences,"Biowissenschaften, Biologie",392
+Thesis,de,elt,Electrical engineering,Elektrotechnik,388
+Thesis,de,mat,Mathematics,Mathematik,383
+Thesis,de,hor,Horticulture,Gartenbau,367
+Thesis,de,geo,Earth Sciences,"Geowissenschaften, Geographie",346
+Thesis,de,arc,Architecture,Architektur,344
+Thesis,de,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",341
+Thesis,de,phi,Philosophy,Philosophie,326
+Thesis,de,lin,Linguistics,Sprachwissenschaften,306
+Thesis,de,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,289
+Thesis,de,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",212
+Thesis,de,fer,Material science,Werkstoffkunde,155
+Thesis,de,bau,Civil engineering,Bauwesen,124
+Thesis,de,spo,Sports Science,Sportwissenschaft,90
+Thesis,de,med,Medical technology,Medizintechnik,58
+Thesis,de,ber,Mining,Bergbau,8

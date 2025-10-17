@@ -14,34 +14,58 @@ LANGS = ["en", "de"]
 
 DOMAIN_PREFIX = "(classificationName=linsearch:mapping)"
 
-OUT_SPLIT = "domain_total_occurrences_by_split.csv"
-OUT_TYPE_LANG = "domain_total_occurrences_by_type_lang.csv"
+OUT_SPLIT_DOMAIN = "domain_occurrences_by_split_and_domain.csv"
+OUT_TYPE_LANG_DOMAIN = "domain_occurrences_by_type_lang_and_domain.csv"
 # ---------------------------
 
-# ---- Domain codes (abbreviations only; used for matching) ----
-DOMAIN_CODES = [
-    "arc","bau","che","elt","fer","his","inf","lin","lit","mat","oek","pae","phi",
-    "phy","sow","tec","ver","ber","bio","cet","geo","hor","jur","mas","med","meda",
-    "rel","rest","spo"
+# ---- Domain codes + full forms (no IRIs) ----
+DOMAIN_ROWS = [
+    ("arc", "Architecture", "Architektur"),
+    ("bau", "Civil engineering", "Bauwesen"),
+    ("che", "Chemistry", "Chemie"),
+    ("elt", "Electrical engineering", "Elektrotechnik"),
+    ("fer", "Material science", "Werkstoffkunde"),
+    ("his", "History", "Geschichte"),
+    ("inf", "Computer Science", "Informatik"),
+    ("lin", "Linguistics", "Sprachwissenschaften"),
+    ("lit", "Literature Studies", "Literaturwissenschaften"),
+    ("mat", "Mathematics", "Mathematik"),
+    ("oek", "Economics", "Wirtschaftswissenschaften"),
+    ("pae", "Educational Science", "Erziehungswissenschaften, Fachdidaktiken"),
+    ("phi", "Philosophy", "Philosophie"),
+    ("phy", "Physics", "Physik"),
+    ("sow", "Social Sciences", "Sozialwissenschaften"),
+    ("tec", "Engineering", "Technik allgemein"),
+    ("ver", "Traffic engineering", "Verkehrstechnik, Verkehrswesen"),
+    ("ber", "Mining", "Bergbau"),
+    ("bio", "Life Sciences", "Biowissenschaften, Biologie"),
+    ("cet", "Chemical and environmental engineering", "Chemische und Umwelttechnik"),
+    ("geo", "Earth Sciences", "Geowissenschaften, Geographie"),
+    ("hor", "Horticulture", "Gartenbau"),
+    ("jur", "Law", "Rechtswissenschaften"),
+    ("mas", "Mechanical engineering, energy technology", "Maschinenbau, Energietechnik"),
+    ("med", "Medical technology", "Medizintechnik"),
+    ("meda", "Medicine", "Medizin"),
+    ("rel", "Study of religions", "Religionswissenschaft, Theologie"),
+    ("rest", "Other subjects", "Konnte nicht zugeordnet werden"),
+    ("spo", "Sports Science", "Sportwissenschaft"),
 ]
+DOMAIN_BY_ABBR = {abbr: {"en": en, "de": de} for abbr, en, de in DOMAIN_ROWS}
+DOMAIN_CODES = list(DOMAIN_BY_ABBR.keys())
 
-# Regex: match either "linsearch:abc" or bare "abc" (word-bounded), case-insensitive
+# Match either "linsearch:abc" or bare "abc" (word-bounded), case-insensitive
 CURIE_PATTERNS = {c: re.compile(rf"\blinsearch:{re.escape(c)}\b", re.IGNORECASE) for c in DOMAIN_CODES}
 CODE_PATTERNS  = {c: re.compile(rf"\b{re.escape(c)}\b", re.IGNORECASE)            for c in DOMAIN_CODES}
 
-
 def get_folder_input(prompt_text, default=None):
-    """Prompt user for a folder path with optional default fallback."""
     if len(sys.argv) > 1 and prompt_text.startswith("Enter the path to your data"):
-        path = sys.argv[1]
-        return path
+        return sys.argv[1]
     path = input(prompt_text).strip()
     if not path and default:
         return default
     return path
 
-
-# --- Ask for user inputs ---
+# --- Inputs ---
 ROOT = get_folder_input("Enter the path to your data folder (e.g., ./library-records-dataset/data): ")
 if not os.path.isdir(ROOT):
     raise ValueError(f"The provided data folder does not exist: {ROOT}")
@@ -51,44 +75,36 @@ OUTPUT_DIR = get_folder_input("Enter output directory (press Enter to use curren
 if not os.path.isdir(OUTPUT_DIR):
     raise ValueError(f"The provided output directory does not exist: {OUTPUT_DIR}")
 
-
-# Map split names to physical paths (mirrors your original structure)
+# Split roots
 SPLIT_DIRS = {
     "train": [os.path.join(ROOT, "train")],
     "dev":   [os.path.join(ROOT, "dev")],
     "test":  [os.path.join(ROOT, "test", "gold-standard-testset"), os.path.join(ROOT, "test")],
 }
 
-
-def extract_domain_occurrences_from_subject_value(val: str) -> int:
-    """
-    Count how many domain codes appear in a subject string (value must start with DOMAIN_PREFIX).
-    Each matched code contributes 1 to the count (even if multiple domains appear in one value).
-    """
+def count_domains_in_subject_value(val: str) -> dict:
+    """Return {abbr: count(0/1)} for a subject string (only if it starts with DOMAIN_PREFIX)."""
     if not (isinstance(val, str) and val.startswith(DOMAIN_PREFIX)):
-        return 0
-
-    count = 0
+        return {}
+    hits = {}
     for code in DOMAIN_CODES:
         if CURIE_PATTERNS[code].search(val) or CODE_PATTERNS[code].search(val):
-            count += 1
-    return count
+            hits[code] = hits.get(code, 0) + 1
+    # We count presence per subject value (multiple different codes in one value each add 1)
+    return hits
 
-
-def count_file_domain_occurrences(path: str) -> int:
-    """
-    Return total domain occurrences in one JSON-LD file (sum across all subject values, all items).
-    """
-    total = 0
+def count_file_domains(path: str) -> dict:
+    """Return total occurrences per domain in one JSON-LD file: {abbr: count}."""
+    totals = defaultdict(int)
     try:
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
     except Exception:
-        return 0
+        return totals
 
     graph = data.get("@graph", [])
     if not isinstance(graph, list):
-        return 0
+        return totals
 
     for item in graph:
         subj = item.get("subject")
@@ -97,19 +113,18 @@ def count_file_domain_occurrences(path: str) -> int:
         if isinstance(subj, list):
             for s in subj:
                 if isinstance(s, str):
-                    total += extract_domain_occurrences_from_subject_value(s)
+                    for abbr, c in count_domains_in_subject_value(s).items():
+                        totals[abbr] += c
         elif isinstance(subj, str):
-            total += extract_domain_occurrences_from_subject_value(subj)
-
-    return total
-
+            for abbr, c in count_domains_in_subject_value(subj).items():
+                totals[abbr] += c
+    return totals
 
 # --- Aggregations ---
-# 1) Per split
-occ_by_split = defaultdict(int)  # split -> total occurrences
-
-# 2) Per (Type, Lang) across all splits
-occ_by_type_lang = defaultdict(int)  # (type, lang) -> total occurrences
+# 1) per split × domain
+occ_by_split_domain = defaultdict(int)  # (split, domain) -> occurrences
+# 2) per type × lang × domain (across all splits)
+occ_by_type_lang_domain = defaultdict(int)  # (type, lang, domain) -> occurrences
 
 for split, base_dirs in SPLIT_DIRS.items():
     base_dir = next((d for d in base_dirs if os.path.isdir(d)), None)
@@ -126,54 +141,87 @@ for split, base_dirs in SPLIT_DIRS.items():
                 if not fname.endswith(".jsonld"):
                     continue
                 fpath = os.path.join(lang_dir, fname)
-                occ = count_file_domain_occurrences(fpath)
+                per_file = count_file_domains(fpath)
 
-                # Aggregate
-                occ_by_split[split] += occ
-                occ_by_type_lang[(doc_type, lang)] += occ
+                # aggregate into both views
+                for abbr, c in per_file.items():
+                    occ_by_split_domain[(split, abbr)] += c
+                    occ_by_type_lang_domain[(doc_type, lang, abbr)] += c
 
+# --- Build CSV #1: per split × domain + ALL row per domain ---
+rows_split = []
+overall_by_domain = defaultdict(int)
 
-# --- Build CSV #1: totals per split + overall ---
-split_rows = []
-overall_total = 0
-for split in ["train", "dev", "test"]:
-    total = occ_by_split.get(split, 0)
-    overall_total += total
-    split_rows.append({"Split": split, "Total Occurrences": total})
+for (split, abbr), total in occ_by_split_domain.items():
+    info = DOMAIN_BY_ABBR[abbr]
+    rows_split.append({
+        "Split": split,
+        "Domain Abbrev": abbr,
+        "Domain (English)": info["en"],
+        "Domain (German)": info["de"],
+        "Total Occurrences": total
+    })
+    overall_by_domain[abbr] += total
 
-split_rows.append({"Split": "ALL", "Total Occurrences": overall_total})
+# add ALL per domain
+for abbr, total in overall_by_domain.items():
+    info = DOMAIN_BY_ABBR[abbr]
+    rows_split.append({
+        "Split": "ALL",
+        "Domain Abbrev": abbr,
+        "Domain (English)": info["en"],
+        "Domain (German)": info["de"],
+        "Total Occurrences": total
+    })
 
-df_split = pd.DataFrame(split_rows)
-df_split_path = os.path.join(OUTPUT_DIR, OUT_SPLIT)
-df_split.to_csv(df_split_path, index=False)
+# ensure domains with zero counts appear for each split and ALL
+for split in ["train", "dev", "test", "ALL"]:
+    for abbr in DOMAIN_CODES:
+        if not any(r["Split"] == split and r["Domain Abbrev"] == abbr for r in rows_split):
+            info = DOMAIN_BY_ABBR[abbr]
+            rows_split.append({
+                "Split": split,
+                "Domain Abbrev": abbr,
+                "Domain (English)": info["en"],
+                "Domain (German)": info["de"],
+                "Total Occurrences": 0
+            })
 
+df_split = pd.DataFrame(rows_split).sort_values(["Split", "Domain Abbrev"]).reset_index(drop=True)
+df_split.to_csv(os.path.join(OUTPUT_DIR, OUT_SPLIT_DOMAIN), index=False)
 
-# --- Build CSV #2: totals per (Type, Lang) + marginal totals ---
-# Base grid (Type × Lang)
-rows = []
+# --- Build CSV #2: per type × lang × domain (no ALL rows) ---
+rows_type_lang = []
+for (doc_type, lang, abbr), total in occ_by_type_lang_domain.items():
+    info = DOMAIN_BY_ABBR[abbr]
+    rows_type_lang.append({
+        "Type": doc_type,
+        "Lang": lang,
+        "Domain Abbrev": abbr,
+        "Domain (English)": info["en"],
+        "Domain (German)": info["de"],
+        "Total Occurrences": total
+    })
+
+# include zero rows for completeness (grid across all types/langs/domains)
 for doc_type in DOC_TYPES:
     for lang in LANGS:
-        rows.append({
-            "Type": doc_type,
-            "Lang": lang,
-            "Total Occurrences": occ_by_type_lang.get((doc_type, lang), 0)
-        })
+        for abbr in DOMAIN_CODES:
+            if not any(
+                r["Type"] == doc_type and r["Lang"] == lang and r["Domain Abbrev"] == abbr
+                for r in rows_type_lang
+            ):
+                info = DOMAIN_BY_ABBR[abbr]
+                rows_type_lang.append({
+                    "Type": doc_type,
+                    "Lang": lang,
+                    "Domain Abbrev": abbr,
+                    "Domain (English)": info["en"],
+                    "Domain (German)": info["de"],
+                    "Total Occurrences": 0
+                })
 
-# Marginal totals: per Type (Lang=ALL), per Lang (Type=ALL)
-# Per Type totals
-for doc_type in DOC_TYPES:
-    s = sum(occ_by_type_lang.get((doc_type, l), 0) for l in LANGS)
-    rows.append({"Type": doc_type, "Lang": "ALL", "Total Occurrences": s})
-
-# Per Lang totals
-for lang in LANGS:
-    s = sum(occ_by_type_lang.get((t, lang), 0) for t in DOC_TYPES)
-    rows.append({"Type": "ALL", "Lang": lang, "Total Occurrences": s})
-
-# Overall (ALL, ALL) — mirrors Split=ALL but kept here for completeness
-overall_type_lang = sum(v for v in occ_by_type_lang.values())
-rows.append({"Type": "ALL", "Lang": "ALL", "Total Occurrences": overall_type_lang})
-
-df_type_lang = pd.DataFrame(rows).sort_values(["Type", "Lang"]).reset_index(drop=True)
-df_type_lang_path = os.path.join(OUTPUT_DIR, OUT_TYPE_LANG)
-df_type_lang.to_csv(df_type_lang_path, index=False)
+df_type_lang = pd.DataFrame(rows_type_lang).sort_values(
+    ["Type", "Lang", "Domain Abbrev"]
+).reset_index(drop=True)
+df_type_lang.to_csv(os.path.join(OUTPUT_DIR, OUT_TYPE_LANG_DOMAIN), index=False)
