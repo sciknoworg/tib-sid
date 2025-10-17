@@ -4,4 +4,5 @@
 4. subject_annotation_frequencies.csv - shows the min, max, and avg subject annotations for the records in our dataset by split, type, and language. The last column shows the filename with the max subject annotations.
 5. domain_occurrences_by_split_and_domain.csv - totals per split × domain and an ALL row per domain. Columns: Split, Domain Abbrev, Domain (English), Domain (German), Total Occurrences. Rows: all domains for train, dev, test, plus an ALL row per domain.
 6. domain_occurrences_by_type_lang_and_domain.csv - totals per record Type × Lang × domain. Columns: Type, Lang, Domain Abbrev, Domain (English), Domain (German), Total Occurrences. Rows: complete grid for every Type × Lang × Domain (zeros included where absent).
-5. scripts/ - this folder includes scripts each of which can be run to recreate the `csv` files.
+7. yearwise_record_counts_by_split.csv - count of issue records by year overall and based on train, dev, and test splits
+8. scripts/ - this folder includes scripts each of which can be run to recreate the `csv` files. In almost all cases the scripts are named close to the name of the csv output file so they should be easy to spot.
