@@ -8,3 +8,5 @@ __pycache__/
 
 # Excel temp files
 ~$*.xlsx
+library-records-dataset/data-analysis/analysis3/embeddings/similar_counts__*.csv
+library-records-dataset/data-analysis/analysis3/embeddings/similar_summary__*.csv
