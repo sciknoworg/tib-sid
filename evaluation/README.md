@@ -1,22 +1,13 @@
-# 📚 LLMs4Subjects -- Evaluation
-
-This README provides instructions and information regarding the evaluation process for the LLMs4Subjects shared task. The aim of this task is the development of advanced semantic subject comprehension systems, focusing on the GND taxonomy. Participants are required to submit ranked lists of relevant subjects, which will be evaluated based on several quantitative metrics.
-
-## 📂 Test Dataset
-
-A portion of the TIBKAT collection has been designated as the blind test dataset. In this dataset, subject heading annotations are hidden. **The test dataset will be released soon...**
-
-Participants must submit a ranked list of the top 20 relevant subjects for each record, ordered by descending relevance.
-
 ## 📊 Quantitative Evaluation
 
-The performance of submitted systems will be assessed using the following metrics:
+The following metrics are used for assessment:
 
 1. **Average Precision@k** for k = 5, 10, 15, 20
 2. **Average Recall@k** for k = 5, 10, 15, 20
 3. **Average F1-score@k** for k = 5, 10, 15, 20
+4. **nCDG@k** for k = 5, 10, 15, 20
 
-Evaluation results will be presented at varying levels of granularity to provide comprehensive insights:
+Evaluation results are offered at varying levels of granularity to provide comprehensive insights:
 
 1. **Language-level**: Separate evaluations for English and German.
 2. **Record-level**: Evaluations for each of the five types of technical records.
@@ -24,7 +15,7 @@ Evaluation results will be presented at varying levels of granularity to provide
 
 ## 🛠️ Evaluation Script
 
-Participants are provided with an evaluation [script](llms4subjects-evaluation.py) to test their model performance on the train and dev sets. The same script will be used during the evaluation phase of the shared task.
+Run the [script](llms4subjects-evaluation.py).
 
 ### Execution Instructions
 
@@ -49,8 +40,6 @@ The script will generate an Excel file containing the evaluation metrics scores,
 ```bash
 $python llms4subjects-evaluation.py
 
-LLMs4Subjects Shared Task -- Evaluations
-
 Please enter your Team Name
 Team Name> test
 
@@ -70,7 +59,3 @@ Evaluating the predicted GND labels...
 
 File containing the evaluation metrics score is saved at location: evaluation/results/test_evaluation_metrics.xlsx
 ```
-
-## 🎯 Conclusion
-
-By following these instructions, participants can effectively evaluate their models using the provided script.

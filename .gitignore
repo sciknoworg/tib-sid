@@ -1,1 +1,10 @@
 __pycache__/
+# embeddings & model blobs
+*.npy
+*.npz
+*.pt
+*.bin
+*.safetensors
+
+# Excel temp files
+~$*.xlsx

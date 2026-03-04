@@ -1,0 +1,117 @@
+Split,Domain Abbrev,Domain (English),Domain (German),Total Occurrences
+train,sow,Social Sciences,Sozialwissenschaften,15448
+train,oek,Economics,Wirtschaftswissenschaften,14907
+train,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",11323
+train,inf,Computer Science,Informatik,9436
+train,mat,Mathematics,Mathematik,8514
+train,his,History,Geschichte,6975
+train,phy,Physics,Physik,6376
+train,jur,Law,Rechtswissenschaften,5298
+train,arc,Architecture,Architektur,4511
+train,lit,Literature Studies,Literaturwissenschaften,4236
+train,tec,Engineering,Technik allgemein,3551
+train,rest,Other subjects,Konnte nicht zugeordnet werden,3517
+train,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,3107
+train,geo,Earth Sciences,"Geowissenschaften, Geographie",2998
+train,elt,Electrical engineering,Elektrotechnik,2825
+train,meda,Medicine,Medizin,2741
+train,rel,Study of religions,"Religionswissenschaft, Theologie",2733
+train,che,Chemistry,Chemie,2613
+train,bio,Life Sciences,"Biowissenschaften, Biologie",2538
+train,lin,Linguistics,Sprachwissenschaften,2527
+train,phi,Philosophy,Philosophie,2128
+train,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",2099
+train,hor,Horticulture,Gartenbau,1798
+train,bau,Civil engineering,Bauwesen,1745
+train,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",1428
+train,fer,Material science,Werkstoffkunde,1197
+train,spo,Sports Science,Sportwissenschaft,817
+train,med,Medical technology,Medizintechnik,427
+train,ber,Mining,Bergbau,121
+dev,oek,Economics,Wirtschaftswissenschaften,2995
+dev,sow,Social Sciences,Sozialwissenschaften,2954
+dev,inf,Computer Science,Informatik,2423
+dev,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",2157
+dev,mat,Mathematics,Mathematik,2108
+dev,phy,Physics,Physik,1729
+dev,his,History,Geschichte,1362
+dev,arc,Architecture,Architektur,1156
+dev,jur,Law,Rechtswissenschaften,1027
+dev,tec,Engineering,Technik allgemein,923
+dev,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,822
+dev,geo,Earth Sciences,"Geowissenschaften, Geographie",780
+dev,lit,Literature Studies,Literaturwissenschaften,772
+dev,elt,Electrical engineering,Elektrotechnik,747
+dev,rest,Other subjects,Konnte nicht zugeordnet werden,740
+dev,che,Chemistry,Chemie,718
+dev,bio,Life Sciences,"Biowissenschaften, Biologie",652
+dev,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",555
+dev,meda,Medicine,Medizin,546
+dev,rel,Study of religions,"Religionswissenschaft, Theologie",462
+dev,lin,Linguistics,Sprachwissenschaften,459
+dev,bau,Civil engineering,Bauwesen,455
+dev,phi,Philosophy,Philosophie,395
+dev,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",378
+dev,hor,Horticulture,Gartenbau,368
+dev,fer,Material science,Werkstoffkunde,337
+dev,spo,Sports Science,Sportwissenschaft,168
+dev,med,Medical technology,Medizintechnik,93
+dev,ber,Mining,Bergbau,28
+test,sow,Social Sciences,Sozialwissenschaften,5984
+test,oek,Economics,Wirtschaftswissenschaften,5662
+test,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",4601
+test,his,History,Geschichte,2861
+test,jur,Law,Rechtswissenschaften,2179
+test,lit,Literature Studies,Literaturwissenschaften,1958
+test,inf,Computer Science,Informatik,1438
+test,mat,Mathematics,Mathematik,1281
+test,rel,Study of religions,"Religionswissenschaft, Theologie",1164
+test,rest,Other subjects,Konnte nicht zugeordnet werden,1155
+test,lin,Linguistics,Sprachwissenschaften,1145
+test,phi,Philosophy,Philosophie,894
+test,phy,Physics,Physik,872
+test,meda,Medicine,Medizin,871
+test,tec,Engineering,Technik allgemein,707
+test,arc,Architecture,Architektur,595
+test,geo,Earth Sciences,"Geowissenschaften, Geographie",539
+test,hor,Horticulture,Gartenbau,503
+test,bio,Life Sciences,"Biowissenschaften, Biologie",495
+test,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,437
+test,elt,Electrical engineering,Elektrotechnik,352
+test,spo,Sports Science,Sportwissenschaft,344
+test,che,Chemistry,Chemie,331
+test,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",278
+test,bau,Civil engineering,Bauwesen,225
+test,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",198
+test,fer,Material science,Werkstoffkunde,151
+test,med,Medical technology,Medizintechnik,69
+test,ber,Mining,Bergbau,17
+ALL,sow,Social Sciences,Sozialwissenschaften,24386
+ALL,oek,Economics,Wirtschaftswissenschaften,23564
+ALL,pae,Educational Science,"Erziehungswissenschaften, Fachdidaktiken",18081
+ALL,inf,Computer Science,Informatik,13297
+ALL,mat,Mathematics,Mathematik,11903
+ALL,his,History,Geschichte,11198
+ALL,phy,Physics,Physik,8977
+ALL,jur,Law,Rechtswissenschaften,8504
+ALL,lit,Literature Studies,Literaturwissenschaften,6966
+ALL,arc,Architecture,Architektur,6262
+ALL,rest,Other subjects,Konnte nicht zugeordnet werden,5412
+ALL,tec,Engineering,Technik allgemein,5181
+ALL,cet,Chemical and environmental engineering,Chemische und Umwelttechnik,4366
+ALL,rel,Study of religions,"Religionswissenschaft, Theologie",4359
+ALL,geo,Earth Sciences,"Geowissenschaften, Geographie",4317
+ALL,meda,Medicine,Medizin,4158
+ALL,lin,Linguistics,Sprachwissenschaften,4131
+ALL,elt,Electrical engineering,Elektrotechnik,3924
+ALL,bio,Life Sciences,"Biowissenschaften, Biologie",3685
+ALL,che,Chemistry,Chemie,3662
+ALL,phi,Philosophy,Philosophie,3417
+ALL,mas,"Mechanical engineering, energy technology","Maschinenbau, Energietechnik",2932
+ALL,hor,Horticulture,Gartenbau,2669
+ALL,bau,Civil engineering,Bauwesen,2425
+ALL,ver,Traffic engineering,"Verkehrstechnik, Verkehrswesen",2004
+ALL,fer,Material science,Werkstoffkunde,1685
+ALL,spo,Sports Science,Sportwissenschaft,1329
+ALL,med,Medical technology,Medizintechnik,589
+ALL,ber,Mining,Bergbau,166
