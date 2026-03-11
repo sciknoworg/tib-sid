@@ -2,7 +2,7 @@
   <img src="./assets/logo.png" alt="TIB-SID logo" width="150"/>
 </p>
 
-The **TIB Subject Indexing Dataset (TIB-SID)** is a bilingual dataset of library records for **domain classification** and **GND-based subject indexing**.
+The **TIB Subject Indexing Dataset (TIB-SID)** is a bilingual benchmark for **extreme multi-label text classification (XMTC)** over real library records, designed for **domain classification** and **GND-based subject indexing**. The dataset combines a large, structured, authority-controlled label space with long-tail sparsity, cross-lingual variation, and real-world domain imbalance, making it substantially closer to operational library cataloging than standard text classification benchmarks.
 
 ## ⬇️ Download
 
@@ -18,9 +18,9 @@ Download the dataset from this folder: [data](./library-records-dataset/data)
 - annotations for **domains** and **GND subjects**
 - data provided in **JSON-LD**
 
-## 🔗 Context
+## 🔗 Related Links
 
-TIB-SID was originally released as benchmark datasets for the **LLMs4Subjects** shared tasks organized in 2025:
+TIB-SID was originally released as the benchmark dataset for the **LLMs4Subjects** shared tasks organized in 2025. In this context, more than 12 LLM-based systems of various natures have been developed and evaluated on TIB-SID by participating teams across the world. Visit the leaderboards on the respective shared task websites to learn more.
 
 - [LLMs4Subjects @ SemEval](https://sites.google.com/view/llms4subjects)
 - [LLMs4Subjects @ GermEval](https://sites.google.com/view/llms4subjects-germeval/)
