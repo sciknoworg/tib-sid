@@ -1,38 +1,33 @@
 <p align="center">
-  <img src="assets/logo.png" alt="TIB-SID logo" width="180"/>
+  <img src="../assets/logo.png" alt="TIB-SID logo" width="150"/>
 </p>
 
-# 📚 Welcome to the TIB-SID Repository!
+The **TIB Subject Indexing Dataset (TIB-SID)** is a bilingual dataset of library records for **domain classification** and **GND-based subject indexing**.
 
-**TIB-SID** stands for **TIB Subject Indexing Dataset**.
+## ⬇️ Download
 
-## 💡 About
+Download the dataset from this folder: [data](./library-records-dataset/data)
 
-The **TIB Subject Indexing Dataset (TIB-SID)** supports the research community 🤝 in developing advanced LLM-based and semantic approaches for automated domain classification and subject indexing 📑 of library records from a national library in Germany. The records are primarily in German and English, though the collection is not limited to these languages.
+## ✨ At a glance
 
-For subject taxonomy, we rely on the [GND](https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html) (**Gemeinsame Normdatei / Integrated Authority File**), an international authority file widely used in German-speaking library systems to catalog and connect information on people, organizations, topics, and works.
+- **136,569** library records
+- **English and German**
+- **28** domains
+- **5** record types: article, book, conference, report, thesis
+- predefined **train / dev / test** splits
+- annotations for **domains** and **GND subjects**
+- data provided in **JSON-LD**
 
-## 📂 Repository Contents
+## 🔗 Context
 
-To support system development, we release four key components:
+TIB-SID was originally released as benchmark datasets for the **LLMs4Subjects** shared tasks organized in 2025:
 
-- [**28_domains_list.csv**](28_domains_list.csv): A list of 28 domains representing the coarse-grained classification scheme applied to the library records. A single record may be assigned more than one domain.
+- [LLMs4Subjects @ SemEval](https://sites.google.com/view/llms4subjects)
+- [LLMs4Subjects @ GermEval](https://sites.google.com/view/llms4subjects-germeval/)
 
-- [**GND**](./GND): Resources related to the GND, including a human-readable version of the GND subject taxonomy. The taxonomy comprises over 200,000 subject headings and serves as the controlled vocabulary for fine-grained subject indexing of the library’s bibliographic records.
+## 📖 Citation
 
-- [**library-records-dataset**](./library-records-dataset): Open-access annotated library records with predefined train/dev/test splits. The dataset contains records in German and English annotated with domain labels and GND subjects. It covers five representative record types: `article`, `book`, `conference`, `report`, and `thesis`.
-
-  Both the GND taxonomy and the open-access records have been reorganized and reformatted with human-readable tags for seamless machine learning use. Since standardized library taxonomies often rely on complex legacy codes ⏳, we consulted subject specialists to preprocess and simplify the data. This allows researchers to focus on developing ML models rather than decoding intricate data formats.
-
-- [**evaluation**](./evaluation): Evaluation scripts providing quantitative metrics—`precision@k`, `recall@k`, `f1@k`, `recall_precision@k`, and `ndcg@k`—for assessing system predictions against the released gold-standard annotations.
-
-
-## 📧 Contact
-
-llms4subjects [at] gmail.com
-
-
-## 💡 Citation
+If you use TIB-SID, please cite:
 
 Coming soon...
 
@@ -68,6 +63,8 @@ year = {2025}
 
 The **LLMs4Subjects** shared task, organized as GermEval 2025, is jointly supported by the [SCINEXT project](https://scinext-project.github.io/) (BMBF, German Federal Ministry of Education and Research, Grant ID: 01lS22070) and the [NFDI4DataScience initiative](https://www.nfdi4datascience.de/) (DFG, German Research Foundation, Grant ID: 460234259).
  -->
+
+## ⚖️ License
 
 This work is licensed under a
 [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa].
