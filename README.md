@@ -26,11 +26,12 @@ To support system development, we release four key components:
 
 - [**evaluation**](./evaluation): Evaluation scripts providing quantitative metrics—`precision@k`, `recall@k`, `f1@k`, `recall_precision@k`, and `ndcg@k`—for assessing system predictions against the released gold-standard annotations.
 
-<!--
+
 ## 📧 Contact
 
 llms4subjects [at] gmail.com
 
+<!--
 ## 💡 Citation
 
 The recommended citation for this dataset resource is provided below. If you find this resource useful, please consider citing it.
