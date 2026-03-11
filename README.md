@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="../assets/logo.png" alt="TIB-SID logo" width="150"/>
+  <img src="./assets/logo.png" alt="TIB-SID logo" width="150"/>
 </p>
 
 The **TIB Subject Indexing Dataset (TIB-SID)** is a bilingual dataset of library records for **domain classification** and **GND-based subject indexing**.
