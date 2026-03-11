@@ -31,9 +31,12 @@ To support system development, we release four key components:
 
 llms4subjects [at] gmail.com
 
-<!--
+
 ## 💡 Citation
 
+Coming soon...
+
+<!--
 The recommended citation for this dataset resource is provided below. If you find this resource useful, please consider citing it.
 
 ```bibtex
