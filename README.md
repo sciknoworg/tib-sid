@@ -4,23 +4,20 @@
 
 The **TIB Subject Indexing Dataset (TIB-SID)** is a bilingual benchmark for **extreme multi-label text classification (XMTC)** over real library records, designed for **domain classification** and **GND-based subject indexing**. The dataset combines a large, structured, authority-controlled label space with long-tail sparsity, cross-lingual variation, and real-world domain imbalance, making it substantially closer to operational library cataloging than standard text classification benchmarks.
 
+## ✨ At a glance
+
+- **136,569** library records in **JSON-LD** with predefined **train / dev / test** benchmark splits
+- **Languages:** English and German
+- [**28 domains**](28_domains_list.csv)
+- **Record types:** article, book, conference, report, thesis
+
 ## ⬇️ Download
 
 Download the dataset from this folder: [data](./library-records-dataset/data)
 
-## ✨ At a glance
-
-- **136,569** library records
-- **English and German**
-- **28** domains
-- **5** record types: article, book, conference, report, thesis
-- predefined **train / dev / test** splits
-- annotations for **domains** and **GND subjects**
-- data provided in **JSON-LD**
-
 ## 🔗 Related Links
 
-TIB-SID was originally released as the benchmark dataset for the **LLMs4Subjects** shared tasks organized in 2025. In this context, more than 12 LLM-based systems of various natures have been developed and evaluated on TIB-SID by participating teams across the world. Visit the leaderboards on the respective shared task websites to learn more.
+TIB-SID was introduced through the **LLMs4Subjects** shared tasks organized in 2025. More than 12 LLM-based systems were developed and evaluated on the dataset by participating teams worldwide. The shared task websites provide additional context, task details, and leaderboard results.
 
 - [LLMs4Subjects @ SemEval](https://sites.google.com/view/llms4subjects)
 - [LLMs4Subjects @ GermEval](https://sites.google.com/view/llms4subjects-germeval/)
