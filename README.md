@@ -13,7 +13,7 @@ The **TIB Subject Indexing Dataset (TIB-SID)** is a bilingual benchmark for **ex
 
 ## ⬇️ Download
 
-Download the dataset from this folder: [data](./library-records-dataset/data)
+Download the dataset here: [data](./library-records-dataset/data)
 
 ## 🔗 Related Links
 
