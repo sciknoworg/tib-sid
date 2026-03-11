@@ -1,25 +1,33 @@
-# 📚 Welcome to the Subject Indexing Dataset Repository!
+<p align="center">
+  <img src="assets/logo.png" alt="TIB-SID logo" width="180"/>
+</p>
+
+# 📚 Welcome to the TIB-SID Repository!
+
+**TIB-SID** stands for **TIB Subject Indexing Dataset**.
 
 ## 💡 About
 
-This dataset empowers the research community 🤝 to build advanced LLM-based semantic solutions for automated domain classification and subject indexing 📑 of library records from a national library in Germany. The records are mainly in German or English but not limited to these natural languages. For the subject taxonomy, we rely on the [GND](https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html) (Gemeinsame Normdatei / Integrated Authority File), an international authority file widely used the in German-speaking library systems to catalog and link information on people, organizations, topics, and works.
+The **TIB Subject Indexing Dataset (TIB-SID)** supports the research community 🤝 in developing advanced LLM-based and semantic approaches for automated domain classification and subject indexing 📑 of library records from a national library in Germany. The records are primarily in German and English, though the collection is not limited to these languages.
 
-## 📂 Repositories Included
+For subject taxonomy, we rely on the [GND](https://www.dnb.de/EN/Professionell/Standardisierung/GND/gnd_node.html) (**Gemeinsame Normdatei / Integrated Authority File**), an international authority file widely used in German-speaking library systems to catalog and connect information on people, organizations, topics, and works.
+
+## 📂 Repository Contents
 
 To support system development, we release four key components:
 
-- [**28_domains_list.csv**](28_domains_list.csv): This file lists 28 domains representing the coarse-grained classification scheme applied to the library records. A record can be assigned more than one domain.
+- [**28_domains_list.csv**](28_domains_list.csv): A list of 28 domains representing the coarse-grained classification scheme applied to the library records. A single record may be assigned more than one domain.
 
 - [**GND**](./GND): Resources related to the GND, including a human-readable version of the GND subject taxonomy. The taxonomy comprises over 200,000 subject headings and serves as the controlled vocabulary for fine-grained subject indexing of the library’s bibliographic records.
 
-- [**library-records-dataset**](./library-records-dataset): Open-access annotated library records with pre-defined train/dev/test splits. The dataset includes records in German and English, annotated with domain labels and GND subjects. It covers five representative record types: `article`, `book`, `conference`, `report`, and `thesis`.
+- [**library-records-dataset**](./library-records-dataset): Open-access annotated library records with predefined train/dev/test splits. The dataset contains records in German and English annotated with domain labels and GND subjects. It covers five representative record types: `article`, `book`, `conference`, `report`, and `thesis`.
 
   Both the GND taxonomy and the open-access records have been reorganized and reformatted with human-readable tags for seamless machine learning use. Since standardized library taxonomies often rely on complex legacy codes ⏳, we consulted subject specialists to preprocess and simplify the data. This allows researchers to focus on developing ML models rather than decoding intricate data formats.
 
 - [**evaluation**](./evaluation): Evaluation scripts providing quantitative metrics—`precision@k`, `recall@k`, `f1@k`, `recall_precision@k`, and `ndcg@k`—for assessing system predictions against the released gold-standard annotations.
 
-
-<!-- ## 📧 Contact
+<!--
+## 📧 Contact
 
 llms4subjects [at] gmail.com
 
