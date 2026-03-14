@@ -24,12 +24,23 @@ TIB-SID was introduced through the **LLMs4Subjects** shared tasks organized in 2
 
 ## 📖 Citation
 
-If you use TIB-SID, please cite:
+If **TIB-SID** useful for your research or project, please consider citing it.
 
-Coming soon...
+The main dataset paper is listed below. It has been **accepted to [LREC 2026](https://lrec2026.info/)**, and the official proceedings citation will be added here as soon as it is available.
 
-<!--
-The recommended citation for this dataset resource is provided below. If you find this resource useful, please consider citing it.
+```bibtex
+@misc{dsouza2026extrememultilabeltextclassification,
+      title={An Extreme Multi-label Text Classification (XMTC) Library Dataset: What if we took "Use of Practical AI in Digital Libraries" seriously?}, 
+      author={Jennifer D'Souza and Sameer Sadruddin and Maximilian Kähler and Andrea Salfinger and Luca Zaccagna and Francesca Incitti and Lauro Snidaro and Osma Suominen},
+      year={2026},
+      eprint={2603.10876},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2603.10876}, 
+}
+```
+
+If you would also like to cite the shared task that introduced the broader benchmark setting, please use:
 
 ```bibtex
 @InProceedings{dsouza-EtAl:2025:SemEval2025,
@@ -45,21 +56,10 @@ url       = {https://aclanthology.org/2025.semeval2025-1.139}
 }
 ```
 
-```bibtex
-@misc{D_Souza_The_GermEval_2025_2025,
-author = {D'Souza, Jennifer and Sadruddin, Sameer and Israel, Holger and Begoin, Mathias and Slawig, Diana},
-doi = {10.5281/zenodo.16743609},
-month = mar,
-title = {{The GermEval 2025 2nd LLMs4Subjects Shared Task Dataset}},
-url = {https://github.com/sciknoworg/llms4subjects},
-year = {2025}
-}
-```
-
 ## ⭐ Acknowledgements
 
-The **LLMs4Subjects** shared task, organized as GermEval 2025, is jointly supported by the [SCINEXT project](https://scinext-project.github.io/) (BMBF, German Federal Ministry of Education and Research, Grant ID: 01lS22070) and the [NFDI4DataScience initiative](https://www.nfdi4datascience.de/) (DFG, German Research Foundation, Grant ID: 460234259).
- -->
+This work was supported by the [NFDI4DataScience initiative](https://www.nfdi4datascience.de/) (DFG, German Research Foundation, Grant ID: 460234259) and the [TIB – Leibniz Information Centre for Science and Technology](https://www.tib.eu/en/). We also gratefully acknowledge the subject specialists at TIB who contributed to the curated human evaluation of this work.
+
 
 ## ⚖️ License
 
